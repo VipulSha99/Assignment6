@@ -1,19 +1,23 @@
-# Assignment 5
+# Assignment 4
 
-## ✨Tabular Representation in Type Script with Backend server and Database✨
+## ✨Tabular Representation in Type Script with Backend server✨
 
 # Run code for both client and server separately -
 #### Install dependencies:
 ```sh
 npm install
 ```
-#### To create JavaScript files from TypeScript
+#### To create JavaScript files from TypeScript in Nodejs
 ```sh
 tsc -w
 ```
-#### To run development Server
+#### To run development Server in Node js
 ```sh
 npm start
+```
+#### To run development Server in Angular js
+```sh
+ng serve
 ```
 #### Screen Shots given Below:
 
