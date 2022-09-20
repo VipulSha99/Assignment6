@@ -14,7 +14,7 @@ export const getUserData = (req:any,res:any)=>{
 
 export const deleteUser = (req:any,res:any)=>{
     const {id} = req.params
-    pool.query('DELETE FROM users WHERE user_id = $1',[id],(q_err:any,q_res:any)=>{
+    pool.query('DELETE FROM users WHERE userId = $1',[id],(q_err:any,q_res:any)=>{
         if(q_err){
             console.log(q_err);
             res.code = 404
@@ -25,7 +25,7 @@ export const deleteUser = (req:any,res:any)=>{
 }
 export const createUser = (req:any,res:any)=>{
     const data = [req.body.firstName,req.body.middleName,req.body.lastName,req.body.email,req.body.phoneNumber,req.body.role,req.body.address,req.body.createdDate];
-    pool.query('insert into users (first_name,middle_name,last_name,email,phone_number,role,address,created_date) values ($1,$2,$3,$4,$5,$6,$7,$8)',data,(q_err:any,q_res:any)=>{
+    pool.query('insert into users (firstName,middleName,lastName,email,phoneNumber,role,address,createdDate) values ($1,$2,$3,$4,$5,$6,$7,$8)',data,(q_err:any,q_res:any)=>{
         if(q_err){
             console.log(q_err);
             res.code = 404
@@ -38,7 +38,7 @@ export const createUser = (req:any,res:any)=>{
 export const updateUser = (req:any,res:any)=>{
     const {id} = req.params
     const data = [req.body.firstName,req.body.middleName,req.body.lastName,req.body.email,req.body.phoneNumber,req.body.role,req.body.address,req.body.createdDate];
-    pool.query('UPDATE users SET first_name=$1,middle_name=$2, last_name=$3, email=$4, phone_number=$5, role=$6, address=$7, created_date=$8 WHERE user_id=$9',[...data,id],(q_err:any,q_res:any)=>{
+    pool.query('UPDATE users SET firstName=$1,middleName=$2, lastName=$3, email=$4, phoneNumber=$5, role=$6, address=$7, createdDate=$8 WHERE userId=$9',[...data,id],(q_err:any,q_res:any)=>{
         if(q_err){
             console.log(q_err);
             res.code = 404

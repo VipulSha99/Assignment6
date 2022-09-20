@@ -45,8 +45,8 @@ export class TabularComponent implements OnInit {
       // data[event.path[2].cells[j].childNodes[0].name]=event.path[2].cells[j].childNodes[0].value;
       editData[event.path[2].cells[j].childNodes[0].name]=event.path[2].cells[j].childNodes[0].value;
     }
-    editData[event.path[2].cells[j].childNodes[0].name]=data.created_date;
-    this.userService.editUser(data.user_id as string,editData).subscribe(_=>{
+    editData[event.path[2].cells[j].childNodes[0].name]=data.createdDate;
+    this.userService.editUser(data.userId as string,editData).subscribe(_=>{
       this.userService.getUsers().subscribe(newData=>{
         this.userData = newData;
       });
@@ -66,7 +66,7 @@ export class TabularComponent implements OnInit {
   }
 
   onDelete(selectedUser:UserModel){
-    this.userService.deleteUser(selectedUser.user_id as string).subscribe(_=>{
+    this.userService.deleteUser(selectedUser.userId as string).subscribe(_=>{
       this.userService.getUsers().subscribe(newData=>{
         this.userData = newData;
       });

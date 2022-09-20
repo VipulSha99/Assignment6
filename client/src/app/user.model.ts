@@ -1,13 +1,13 @@
 export interface UserModel{
-    user_id?: string,
-    first_name: string,
-    middle_name: string,
-    last_name: string,
+    userId?: string,
+    firstName: string,
+    middleName: string,
+    lastName: string,
     email: string,
-    phone_number: number,
+    phoneNumber: number,
     role: string,
     address: string,
-    created_date: string,
+    createdDate: string,
 }
 
 export enum Role {
