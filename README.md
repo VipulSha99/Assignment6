@@ -1,6 +1,6 @@
-# Assignment 4
+# Assignment 6
 
-## ✨Tabular Representation in Type Script with Backend server✨
+## ✨Tabular Representation in Angular with Backend server✨
 
 # Run code for both client and server separately -
 #### Install dependencies:
